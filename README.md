@@ -10,3 +10,7 @@ npm install;<br>
 npm run start;
 
 Press "equirectangular render" or "perspective render" to save a screenshot
+
+To create a screenshot programmatically, just call:
+- `window.renderPerspective` for a perspective screenshot
+- `window.renderEquirectangular` for a equirectangular screenshot
