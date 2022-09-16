@@ -25,8 +25,8 @@
         electron.savePNG({projection: projection, dataUrl: dataURL})
     }
 
-    const renderPerspective = render.bind(this, "perspective")
-    const renderEquirectangular = render.bind(this, "equirectangular")
-    perspBtn.addEventListener("click", renderPerspective);
-    equirectBtn.addEventListener("click", renderEquirectangular);
+    window.renderPerspective = render.bind(this, "perspective")
+    window.renderEquirectangular = render.bind(this, "equirectangular")
+    perspBtn.addEventListener("click", window.renderPerspective);
+    equirectBtn.addEventListener("click", window.renderEquirectangular);
 })()
