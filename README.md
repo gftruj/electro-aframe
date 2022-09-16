@@ -14,3 +14,5 @@ Press "equirectangular render" or "perspective render" to save a screenshot
 To create a screenshot programmatically, just call:
 - `window.renderPerspective` for a perspective screenshot
 - `window.renderEquirectangular` for a equirectangular screenshot
+
+Both functions block the main thread, so you can call them on each renderloop if you want to render an entire animation.
