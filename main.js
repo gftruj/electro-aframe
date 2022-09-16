@@ -45,11 +45,17 @@ app.whenReady().then(() => {
 
   ipcMain.on('save-as-png', saveAsPng)
   ipcMain.on('save-glb', saveAsGLB)
+  checkOutputDir();
 })
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
+
+function checkOutputDir() {
+  if (fs.existsSync("./output")) return;
+  fs.mkdirSync("./output");
+}
 
 function saveAsPng(event, data) {
   console.log("saving...")
