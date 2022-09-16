@@ -8,5 +8,6 @@ for (const dependency of ['chrome', 'node', 'electron']) {
 
 /* main process API */
 contextBridge.exposeInMainWorld('electron', {
-  savePNG: (data) => ipcRenderer.send('save-as-png', data)
+  savePNG: (data) => ipcRenderer.send('save-as-png', data),
+  saveGLB: (data) => ipcRenderer.send('save-glb', data)
 })
