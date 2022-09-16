@@ -46,7 +46,6 @@ app.whenReady().then(() => {
   ipcMain.on('save-as-png', saveAsPng)
 })
 
-
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
@@ -64,5 +63,6 @@ function saveAsPng(event, data) {
     buffer,
     function (err, result) {
       if (err) console.log('error', err);
+      console.log("saved!")
     });
 }
