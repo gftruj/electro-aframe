@@ -3,10 +3,10 @@
 Electron + a-frame.<br>
 IPC for:
 - saving equirectangular and perspective screenshots in the output folder.
-![Alt text](sample/render-perspective-1663347683003.png "Optional title")
+<img src="sample/render-perspective-1663347683003.png" alt="drawing" width="500"/>
 
 - or exporting the entire scene as glb<br>
-![Alt text](sample/glbexport.png "Optional title")
+<img src="sample/glbexport.png" alt="drawing" width="500"/>
 
 ## Quick start
 
@@ -19,8 +19,8 @@ download the repo, install the dependencies, start the app:
 Press "equirectangular render" or "perspective render" to save a screenshot
 
 To create a screenshot programmatically, just call:
-- `window.renderPerspective` for a perspective screenshot
-- `window.renderEquirectangular` for a equirectangular screenshot
+- `window.renderPerspective()` for a perspective screenshot
+- `window.renderEquirectangular()` for a equirectangular screenshot
 
 To export the scene as gltf, just call `window.exportScene()`
 
