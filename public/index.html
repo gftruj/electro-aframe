@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="./screenshot.js" defer></script>
+  </head>
+  <body>
+    <a-scene renderer="colorManagement: true">
+      <a-assets>
+        <img id="spaceship" src="./assets/spacelaunch.jpg">
+        <a-asset-item id="shuttle" src="./assets/shuttle/scene.gltf"></a-asset-item>
+        <a-asset-item id="space" src="./assets/space/scene.gltf"></a-asset-item>
+      </a-assets>
+      <a-gltf-model position="-1 4 -6" rotation="30 30 30" src="#shuttle"></a-gltf-model>
+      <a-gltf-model position="-50 -20 0" scale="40 40 40" rotation="-10 0 0" src="#space"></a-gltf-model>
+
+      <a-box position="-1 0.5 -3" rotation="0 45 0" material="src: #spaceship"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#000000"></a-sky>
+    </a-scene>
+  </body>
+</html>
