@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const express = require('express')
-const { writeFile } = require('fs')
+const { writeFile, existsSync, mkdirSync } = require('fs')
 
 /* Start a server */
 const server = express()
@@ -53,8 +53,8 @@ app.on('window-all-closed', () => {
 })
 
 function checkOutputDir() {
-  if (fs.existsSync("./output")) return;
-  fs.mkdirSync("./output");
+  if (existsSync("./output")) return;
+  mkdirSync("./output");
 }
 
 function saveAsPng(event, data) {
